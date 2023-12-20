@@ -1,8 +1,12 @@
-Deploying the Swiggy clone app with Terraform, Kubernetes, and Jenkins CICD.
-Test200
+# DevSecOps Project : Swiggy-Clone
 
+## Tools Used:
 
-
-
-
-
+* Terraform
+* AWS
+* Jenkins
+* Github
+* SonarQube
+* Trivy
+* Docker & Dockerhub
+* EKS Cluster
