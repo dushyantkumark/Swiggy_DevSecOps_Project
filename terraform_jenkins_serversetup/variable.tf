@@ -21,3 +21,11 @@ variable "key_pair" {
 variable "jenkins-sg" {
     description = "provide inbound and outbound ports for traffic"
 }
+
+variable "state_table_name" {
+  description = "provide dynamo-db table name for terraform state loking"
+}
+
+variable "s3_bucket_name" {
+  description = "provide s3 bucket name for terraform state management"
+}
