@@ -66,5 +66,20 @@ pipeline{
                 sh "trivy image dushyantkumark/swiggy-app:latest > trivyimage.txt" 
             }
         }
+        stage("Depoy to container"){
+            steps{
+                sh "docker run -d -p 3000:80 --name swiggy dushyantkumark/swiggy:latest" 
+            }
+        }
+        stage('Deploy to k8s'){
+            steps{
+                dir('k8s-manifest') {
+                  withKubeCredentials(kubectlCredentials: [[caCertificate: '', clusterName: 'swiggy-cluster', contextName: '', credentialsId: 'k8s', namespace: 'swiggy', serverUrl: '']]) {
+                    sh 'kubectl apply -f deployment.yaml'    
+                    sh 'kubectl apply -f service.yaml'
+                   }
+                }   
+            }
+        }
     }
 }
