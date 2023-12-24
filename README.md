@@ -8,5 +8,10 @@
 * Github
 * SonarQube
 * Trivy
+* OWASP
 * Docker & Dockerhub
 * EKS Cluster
+
+### DevSecOps Project Diagram:
+
+![1703421773257](image/README/1703421773257.png)
