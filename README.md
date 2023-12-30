@@ -1,4 +1,4 @@
-# ![1703966064979](image/README/1703966064979.png)DevSecOps Project : Swiggy-Clone
+#DevSecOps Project : Swiggy-Clone
 
 ## Tools Used:
 
